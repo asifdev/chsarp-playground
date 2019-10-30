@@ -51,6 +51,16 @@ namespace HelloWorld
 
             var numArray = new char[3] { 'a', 'b', 'c' };
             Console.WriteLine(numArray[1]);
+
+            //var input = new ChackNumberValid();
+            //input.validity();
+            //input.findMax();
+            //input.checkDimension();
+
+            var input = new speedLimitCheck();
+            input.checkLimit();
+
+            
         }
     }
 }
