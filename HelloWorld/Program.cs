@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace HelloWorld
 {
@@ -6,61 +7,43 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            byte number = 2;
-            int count = 10;
-            float totalPrice = 20.95f;
-            bool isTired = false;
-            char character = 'A';
-            string name = "Asif";
+            /*
+             * Array
+            var array = new[] { 1, 6, 3, 4, 5, 2 };
 
-            Console.WriteLine(number);
-            Console.WriteLine(count);
-            Console.WriteLine(totalPrice);
-            Console.WriteLine(isTired);
-            Console.WriteLine(character);
-            Console.WriteLine(name);
-            Console.WriteLine("{0} {1}", byte.MaxValue, 'B');
+            //Length
+            Console.WriteLine(array.Length);
+            Console.WriteLine(Array.IndexOf(array, 3));
 
-            //try
-            //{
-            //    string sales = "1234";
-            //    byte b = Convert.ToByte(sales);
-            //    Console.WriteLine(b);
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine("Error Found");
-            //}
 
-            var z = 10;
-            var y = 3;
-            Console.WriteLine(z / y);
-            Console.WriteLine((float) z / (float) y);
+            Array.Clear(array, 0, 2);
+            Array.Reverse(array);
+            Array.Sort(array);
+            var arrayClone = new int[5];
 
-            byte number1 = 255;
+            Array.Copy(array, arrayClone, 5);
 
-            number1 += 2;
 
-            Console.WriteLine(number1);
-            var person = new Person
+            foreach (var elem in arrayClone)
             {
-                FirstName = "Asif",
-                LastName = "Khan"
-            };
-            person.Introduce();
+                Console.WriteLine(elem);
+            }
+            */
 
-            var numArray = new char[3] { 'a', 'b', 'c' };
-            Console.WriteLine(numArray[1]);
+            var numbers = new List<int>() { 1, 2, 3, 4 };
+            numbers.AddRange(new int[3] { 5, 6, 7 });
 
-            //var input = new ChackNumberValid();
-            //input.validity();
-            //input.findMax();
-            //input.checkDimension();
+            foreach(var num in numbers)
+            {
+                Console.WriteLine(num);
+            }
 
-            var input = new speedLimitCheck();
-            input.checkLimit();
+            var now = DateTime.Now;
+            Console.WriteLine(now.ToString());
+            Console.WriteLine(now.ToShortDateString());
+            Console.WriteLine(now.ToLongTimeString());
 
-            
+
         }
     }
 }
