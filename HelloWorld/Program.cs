@@ -6,61 +6,12 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            byte number = 2;
-            int count = 10;
-            float totalPrice = 20.95f;
-            bool isTired = false;
-            char character = 'A';
-            string name = "Asif";
+            var fullName = "Asif Khan ";
+            Console.WriteLine("Trim: '{0}'", fullName.Trim());
+            Console.WriteLine("Upper: '{0}'", fullName.ToUpper());
+            Console.WriteLine("Lower: '{0}'", fullName.ToLower());
 
-            Console.WriteLine(number);
-            Console.WriteLine(count);
-            Console.WriteLine(totalPrice);
-            Console.WriteLine(isTired);
-            Console.WriteLine(character);
-            Console.WriteLine(name);
-            Console.WriteLine("{0} {1}", byte.MaxValue, 'B');
 
-            //try
-            //{
-            //    string sales = "1234";
-            //    byte b = Convert.ToByte(sales);
-            //    Console.WriteLine(b);
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine("Error Found");
-            //}
-
-            var z = 10;
-            var y = 3;
-            Console.WriteLine(z / y);
-            Console.WriteLine((float) z / (float) y);
-
-            byte number1 = 255;
-
-            number1 += 2;
-
-            Console.WriteLine(number1);
-            var person = new Person
-            {
-                FirstName = "Asif",
-                LastName = "Khan"
-            };
-            person.Introduce();
-
-            var numArray = new char[3] { 'a', 'b', 'c' };
-            Console.WriteLine(numArray[1]);
-
-            //var input = new ChackNumberValid();
-            //input.validity();
-            //input.findMax();
-            //input.checkDimension();
-
-            var input = new speedLimitCheck();
-            input.checkLimit();
-
-            
         }
     }
 }
